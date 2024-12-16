@@ -51,3 +51,34 @@ body {
         margin-bottom: 95px;
     }
 }
+
+input,
+textarea,
+button,
+select {
+    box-shadow: none;
+    outline: none;
+    color: @black;
+    font-family: @font1;
+}
+
+button{
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    &::placeholder {
+        color: @gray;
+    }
+}
+
+input:focus,
+textarea:focus {
+    &::placeholder {
+        color: transparent
+    }
+}
