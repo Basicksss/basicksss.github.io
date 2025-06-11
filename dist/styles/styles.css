@@ -3158,7 +3158,8 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: rgba(222, 222, 222, 0.5);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   z-index: 100;
 }
 .page-header__container {
@@ -3738,10 +3739,11 @@ button.swiper-pagination-bullet {
   overflow-y: auto;
   z-index: 110;
 }
-@supports (backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
   .pp {
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
   }
 }
 .pp__wrapper {
@@ -3766,7 +3768,7 @@ button.swiper-pagination-bullet {
   -webkit-box-shadow: 0px 0px 30px rgba(31, 31, 30, 0.55);
           box-shadow: 0px 0px 30px rgba(31, 31, 30, 0.55);
 }
-@supports (backdrop-filter: blur(20px)) {
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
   .pp__wrapper {
     -webkit-box-shadow: none;
             box-shadow: none;
